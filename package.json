@@ -7,12 +7,21 @@
     "jest": "^24.9.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage && sonar-scanner -Dsonar.projectKey=jesttest"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "coverage",
+    "reportFile": "test-report.xml",
+    "indent": 4
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "jest-sonar-reporter": "^2.0.0",
     "supertest": "^4.0.2"
   }
 }

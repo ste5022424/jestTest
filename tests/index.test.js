@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../express');
+const app = require('../src/express');
 
 describe('Express Router Test', () => {
     it('Test Http Get', async () => {
@@ -9,7 +9,6 @@ describe('Express Router Test', () => {
         expect(res.text).toBe('Hello')
     });
 })
-
 
 describe('Sample Test', () => {
     it('Test Hello', () => {
